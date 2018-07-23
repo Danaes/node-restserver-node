@@ -13,3 +13,10 @@ else
     urlDB = process.env.MONGO_URI;
 
 process.env.URLBD = urlDB;
+
+// === TOKEN EXPIRATON ===
+// 3O DÍAS
+process.env.TOKEN_EXPIRATON = 60 * 60 * 24 * 30;
+
+// === SEED ===
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';

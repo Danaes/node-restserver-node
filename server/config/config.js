@@ -20,3 +20,6 @@ process.env.TOKEN_EXPIRATON = 60 * 60 * 24 * 30;
 
 // === SEED ===
 process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
+
+// === Google ClientID ===
+process.env.CLIENT_ID = process.env.CLIENT_ID || '27094936869-h8t9g3rkronjsqgv0kvot4h6i9jht8l4.apps.googleusercontent.com';

@@ -7,7 +7,7 @@ const { verifyToken, verifyAdminRole } = require('../middlewares/authentication'
 
 const app = express();
 
-app.get('/usuario', [ verifyToken ], (req, res) => {
+app.get('/user', [ verifyToken ], (req, res) => {
 
     let desde = req.query.desde || 0;
     desde = Number(desde);
@@ -37,7 +37,7 @@ app.get('/usuario', [ verifyToken ], (req, res) => {
 
 });
 
-app.post('/usuario', [ verifyToken, verifyAdminRole ], (req, res) => {
+app.post('/user', [ verifyToken, verifyAdminRole ], (req, res) => {
 
     let body = req.body;
 
@@ -63,7 +63,7 @@ app.post('/usuario', [ verifyToken, verifyAdminRole ], (req, res) => {
     });
 });
 
-app.put('/usuario/:id', [ verifyToken, verifyAdminRole ], (req, res) => {
+app.put('/user/:id', [ verifyToken, verifyAdminRole ], (req, res) => {
 
     let id = req.params.id;
     let body =  _.pick(req.body, ['name','email','img','role','status']);
@@ -85,7 +85,7 @@ app.put('/usuario/:id', [ verifyToken, verifyAdminRole ], (req, res) => {
     });
 });
 
-app.delete('/usuario/:id', [ verifyToken, verifyAdminRole ], (req, res) => {
+app.delete('/user/:id', [ verifyToken, verifyAdminRole ], (req, res) => {
 
     let id = req.params.id;
 

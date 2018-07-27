@@ -16,7 +16,7 @@ process.env.URLBD = urlDB;
 
 // === TOKEN EXPIRATON ===
 // 3O DÍAS
-process.env.TOKEN_EXPIRATON = 60 * 60 * 24 * 30;
+process.env.TOKEN_EXPIRATON = '48h';
 
 // === SEED ===
 process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
